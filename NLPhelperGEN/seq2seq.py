@@ -12,7 +12,7 @@ nonce_initial='kelsakiwi'
 nlp = spacy.load('en')
 
 
-class sseq2seq():
+class seq2seq():
 
     def __init__(self, datasetpath, stemming=False):
         self.data = pd.read_csv(datasetpath, skipinitialspace=True)
