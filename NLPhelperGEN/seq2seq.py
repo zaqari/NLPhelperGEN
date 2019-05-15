@@ -172,7 +172,7 @@ class sseq2seq():
             y_, h, c = decoder.predict([target_sequence] + state)
             output.append(y_[0, 0, :])
             state = [h, c]
-            target_sequence = keras.utils.to_categorical(y_, len(self.decoder_dic)
+            target_sequence = keras.utils.to_categorical(y_, len(self.decoder_dic))
         return np.array(output), state[0], state[1]
 
 
